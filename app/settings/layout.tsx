@@ -1,0 +1,20 @@
+import type { ReactNode } from 'react';
+import Navbar from '@/components/layout/Navbar';
+import { DesktopSidebar } from '@/components/layout/Sidebar';
+
+export const metadata = {
+  title: 'Settings',
+  description: 'Manage your account and preferences',
+};
+
+export default function SettingsLayout({ children }: { children: ReactNode }) {
+  return (
+    <>
+      <Navbar />
+      <DesktopSidebar />
+      <main className="lg:pl-64 pt-16 min-h-screen">
+        <div className="p-6 max-w-screen-xl mx-auto">{children}</div>
+      </main>
+    </>
+  );
+}
